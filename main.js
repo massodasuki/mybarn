@@ -4,8 +4,8 @@ const requestIp = require('request-ip');
 
 app.get('/', (req, res) => {
 
-    const clientIp = requestIp.getClientIp(req.connection.remoteAddress);
-    console.log(req.socket);
+    const clientIp = requestIp.getClientIp(req); 
+    console.log(clientIp);
     res.send(clientIp)
 })
 
